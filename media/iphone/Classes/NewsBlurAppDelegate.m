@@ -10,6 +10,8 @@
 #import "NewsBlurViewController.h"
 #import "FeedDetailViewController.h"
 #import "StoryDetailViewController.h"
+#import "StoryDetailView.h"
+
 #import "LoginViewController.h"
 #import "OriginalStoryViewController.h"
 
@@ -22,6 +24,7 @@
 @synthesize storyDetailViewController;
 @synthesize loginViewController;
 @synthesize originalStoryViewController;
+@synthesize storyDetailView;
 
 @synthesize logoutDelegate;
 @synthesize activeUsername;

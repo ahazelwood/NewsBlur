@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ATPagingView.h"
 
 @class NewsBlurAppDelegate;
+@class StoryDetailView;
 
-@interface StoryDetailViewController : UIViewController 
-<UIScrollViewDelegate> {
+@interface StoryDetailViewController : ATPagingViewController {
     NewsBlurAppDelegate *appDelegate;
 
     UIProgressView *progressView;
@@ -22,19 +23,6 @@
     
 }
 
-@property (nonatomic, retain) IBOutlet UIProgressView *progressView;
-@property (nonatomic, retain) IBOutlet UIWebView *webView;
-@property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *buttonPrevious;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *buttonNext;
 @property (nonatomic, retain) IBOutlet NewsBlurAppDelegate *appDelegate;
-
-- (void)setNextPreviousButtons;
-- (void)markStoryAsRead;
-- (void)showStory;
-- (void)showOriginalSubview:(id)sender;
-- (IBAction)doNextUnreadStory;
-- (IBAction)doPreviousStory;
-- (void)markedAsRead;
 
 @end
